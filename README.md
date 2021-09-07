@@ -205,6 +205,22 @@ The data files (databases) are licensed under an [Open Data Commons Attribution 
 
 <!-- </license> -->
 
+<!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
+
+<section class="related">
+
+* * *
+
+## See Also
+
+-   [`@stdlib/datasets/afinn-111`][@stdlib/datasets/afinn-111]: A list of English words rated for valence.
+
+</section>
+
+<!-- /.related -->
+
+<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
 
 <section class="main-repo" >
 
@@ -268,6 +284,12 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 [cc-by-4.0]: http://creativecommons.org/licenses/by/4.0/
 
 [apache-license]: https://www.apache.org/licenses/LICENSE-2.0
+
+<!-- <related-links> -->
+
+[@stdlib/datasets/afinn-111]: https://github.com/stdlib-js/datasets-afinn-111
+
+<!-- </related-links> -->
 
 </section>
 
