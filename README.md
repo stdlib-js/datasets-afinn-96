@@ -24,38 +24,31 @@ limitations under the License.
 
 > A [list][afinn] of English words rated for [valence][valence].
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/datasets-afinn-96
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-afinn96 = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/datasets-afinn-96@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var afinn96 = require( 'path/to/vendor/umd/datasets-afinn-96/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/datasets-afinn-96@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.afinn96;
-})();
-</script>
+var afinn96 = require( '@stdlib/datasets-afinn-96' );
 ```
 
 #### afinn96()
@@ -110,13 +103,8 @@ var words = afinn96();
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/datasets-afinn-96@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var afinn96 = require( '@stdlib/datasets-afinn-96' );
 
 var words;
 var dict;
@@ -132,18 +120,80 @@ for ( i = 0; i < len; i++ ) {
     dict[ words[i][0] ] = words[i][1];
 }
 console.dir( dict );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
 
 <!-- /.examples -->
 
+* * *
 
+<section class="cli">
+
+## CLI
+
+<section class="installation">
+
+## Installation
+
+To use as a general utility, install the CLI package globally
+
+```bash
+npm install -g @stdlib/datasets-afinn-96-cli
+```
+
+</section>
+
+<!-- CLI usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```text
+Usage: afinn-96 [options]
+
+Options:
+
+  -h,    --help                Print this message.
+  -V,    --version             Print the package version.
+         --format fmt          Output format: 'csv' or 'ndjson'.
+```
+
+</section>
+
+<!-- /.usage -->
+
+<section class="notes">
+
+### Notes
+
+-   The CLI supports two output formats: comma-separated values ([CSV][csv]) and newline-delimited JSON ([NDJSON][ndjson]). The default output format is [CSV][csv].
+
+</section>
+
+<!-- /.notes -->
+
+<section class="examples">
+
+### Examples
+
+```bash
+$ afinn-96
+word,valence
+abandon,-2
+abandons,-2
+abandoned,-2
+...
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.cli -->
 
 * * *
 
@@ -174,7 +224,7 @@ The data files (databases) are licensed under an [Open Data Commons Attribution 
 
 ## See Also
 
--   <span class="package-name">[`@stdlib/datasets/afinn-111`][@stdlib/datasets/afinn-111]</span><span class="delimiter">: </span><span class="description">A list of English words rated for valence.</span>
+-   <span class="package-name">[`@stdlib/datasets-afinn-111`][@stdlib/datasets/afinn-111]</span><span class="delimiter">: </span><span class="description">A list of English words rated for valence.</span>
 
 </section>
 
@@ -234,6 +284,10 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-authors]: https://github.com/stdlib-js/stdlib/graphs/contributors
 
+[cli-section]: https://github.com/stdlib-js/datasets-afinn-96#cli
+[cli-url]: https://github.com/stdlib-js/datasets-afinn-96/tree/cli
+[@stdlib/datasets-afinn-96]: https://github.com/stdlib-js/datasets-afinn-96/tree/main
+
 [umd]: https://github.com/umdjs/umd
 [es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 
@@ -260,7 +314,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/datasets/afinn-111]: https://github.com/stdlib-js/datasets-afinn-111/tree/umd
+[@stdlib/datasets/afinn-111]: https://github.com/stdlib-js/datasets-afinn-111
 
 <!-- </related-links> -->
 
