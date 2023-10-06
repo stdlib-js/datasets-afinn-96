@@ -35,19 +35,113 @@ limitations under the License.
 
 > A [list][afinn] of English words rated for [valence][valence].
 
+<section class="installation">
 
+## Installation
 
+```bash
+npm install @stdlib/datasets-afinn-96
+```
 
+Alternatively,
 
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
 
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
 
+</section>
 
+<section class="usage">
 
+## Usage
 
+```javascript
+var afinn96 = require( '@stdlib/datasets-afinn-96' );
+```
+
+#### afinn96()
+
+Returns a [list][afinn] of `1468` unique English words (and phrases) rated for [valence][valence]. Negative words have a negative [valence][valence] (`[-5,0)`). Positive words have a positive [valence][valence] (`(0,5]`). Neutral words have a [valence][valence] of `0`.
+
+```javascript
+var words = afinn96();
+/* returns
+    [
+        ['abandon',-2],
+        ['abandons',-2],
+        ['abandoned',-2],
+        ['absentee',-1],
+        ['absentees',-1],
+        ['aboard',1],
+        ['abducted',-2],
+        ['abduction',-2],
+        ['abductions',-2],
+        ['abuse',-3],
+        ['abused',-3],
+        ...
+    ]
+*/
+```
+
+</section>
+
+<!-- /.usage -->
+
+<section class="notes">
+
+## Notes
+
+-   The list is an earlier version of [AFINN-111][afinn].
+-   The list contains duplicated words.
+-   The list includes misspelled words. Their presence is intentional, as such misspellings frequently occur in social media content.
+-   All words are lowercase.
+-   Some "words" are phrases; e.g., `cashing in`, `cool stuff`.
+-   Words may contain apostrophes; e.g., `can't stand`.
+-   Words may contain dashes; e.g., `cover-up`, `made-up`. 
+
+</section>
+
+<!-- /.notes -->
+
+<section class="examples">
+
+<!-- TODO: more creative example; possibly counting the number of negative words per sentence in two pieces of text. -->
+
+## Examples
+
+<!-- eslint no-undef: "error" -->
+
+```javascript
+var afinn96 = require( '@stdlib/datasets-afinn-96' );
+
+var words;
+var dict;
+var len;
+var i;
+
+words = afinn96();
+
+// Convert to a dictionary...
+len = words.length;
+dict = {};
+for ( i = 0; i < len; i++ ) {
+    dict[ words[i][0] ] = words[i][1];
+}
+console.dir( dict );
+```
+
+</section>
+
+<!-- /.examples -->
+
+* * *
 
 <section class="cli">
 
-
+## CLI
 
 <section class="installation">
 
@@ -65,7 +159,7 @@ npm install -g @stdlib/datasets-afinn-96-cli
 
 <section class="usage">
 
-## Usage
+### Usage
 
 ```text
 Usage: afinn-96 [options]
@@ -83,7 +177,7 @@ Options:
 
 <section class="notes">
 
-## Notes
+### Notes
 
 -   The CLI supports two output formats: comma-separated values ([CSV][csv]) and newline-delimited JSON ([NDJSON][ndjson]). The default output format is [CSV][csv].
 
@@ -93,7 +187,7 @@ Options:
 
 <section class="examples">
 
-## Examples
+### Examples
 
 ```bash
 $ afinn-96
@@ -137,9 +231,10 @@ The data files (databases) are licensed under an [Open Data Commons Attribution 
 
 <section class="related">
 
+* * *
+
 ## See Also
 
--   <span class="package-name">[`@stdlib/datasets-afinn-96`][@stdlib/datasets-afinn-96]</span><span class="delimiter">: </span><span class="description">a list of English words rated for valence.</span>
 -   <span class="package-name">[`@stdlib/datasets-afinn-111`][@stdlib/datasets/afinn-111]</span><span class="delimiter">: </span><span class="description">A list of English words rated for valence.</span>
 
 </section>
@@ -159,7 +254,7 @@ This package is part of [stdlib][stdlib], a standard library for JavaScript and 
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
-### Community
+#### Community
 
 [![Chat][chat-image]][chat-url]
 
@@ -177,8 +272,8 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <section class="links">
 
-[npm-image]: http://img.shields.io/npm/v/@stdlib/datasets-afinn-96-cli.svg
-[npm-url]: https://npmjs.org/package/@stdlib/datasets-afinn-96-cli
+[npm-image]: http://img.shields.io/npm/v/@stdlib/datasets-afinn-96.svg
+[npm-url]: https://npmjs.org/package/@stdlib/datasets-afinn-96
 
 [test-image]: https://github.com/stdlib-js/datasets-afinn-96/actions/workflows/test.yml/badge.svg?branch=main
 [test-url]: https://github.com/stdlib-js/datasets-afinn-96/actions/workflows/test.yml?query=branch:main
