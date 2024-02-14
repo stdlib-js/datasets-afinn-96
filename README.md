@@ -42,6 +42,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import afinn96 from 'https://cdn.jsdelivr.net/gh/stdlib-js/datasets-afinn-96@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/datasets-afinn-96/tags). For example,
+
+```javascript
 import afinn96 from 'https://cdn.jsdelivr.net/gh/stdlib-js/datasets-afinn-96@v0.2.0-esm/index.mjs';
 ```
 
@@ -103,7 +108,7 @@ var words = afinn96();
 <body>
 <script type="module">
 
-import afinn96 from 'https://cdn.jsdelivr.net/gh/stdlib-js/datasets-afinn-96@v0.2.0-esm/index.mjs';
+import afinn96 from 'https://cdn.jsdelivr.net/gh/stdlib-js/datasets-afinn-96@esm/index.mjs';
 
 var words;
 var dict;
