@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import afinn96 from 'https://cdn.jsdelivr.net/gh/stdlib-js/datasets-afinn-96@esm/index.mjs';
+import afinn96 from 'https://cdn.jsdelivr.net/gh/stdlib-js/datasets-afinn-96@v0.2.2-esm/index.mjs';
 ```
 
 #### afinn96()
@@ -103,7 +103,7 @@ var words = afinn96();
 <body>
 <script type="module">
 
-import afinn96 from 'https://cdn.jsdelivr.net/gh/stdlib-js/datasets-afinn-96@esm/index.mjs';
+import afinn96 from 'https://cdn.jsdelivr.net/gh/stdlib-js/datasets-afinn-96@v0.2.2-esm/index.mjs';
 
 var words;
 var dict;
